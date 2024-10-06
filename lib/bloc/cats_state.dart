@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+
 
 abstract class CatsState {
   const CatsState();

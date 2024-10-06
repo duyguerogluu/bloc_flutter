@@ -2,7 +2,6 @@ import 'package:bloc_flutter/bloc/bloc_cubit.dart';
 import 'package:bloc_flutter/bloc/cats_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bloc/bloc.dart';
 
 class BlockCatsView extends StatefulWidget {
   const BlockCatsView({super.key});
@@ -23,7 +22,7 @@ class _BlockCatsViewState extends State<BlockCatsView> {
   Scaffold buildScaffold(BuildContext context) => Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            context.bloc<CatsCubit>().getCats(); //**** */
+            context.read<CatsCubit>().getCats(); //**** */
           },
           child: const Icon(Icons.install_desktop),
         ),
@@ -61,5 +60,3 @@ class _BlockCatsViewState extends State<BlockCatsView> {
         ),
       );
 }
-
-
